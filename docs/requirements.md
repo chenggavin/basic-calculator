@@ -37,7 +37,7 @@ The calculator should store three values internally:
 
 The display should update as the user presses number buttons.
 
-When the decimal point is pressed, it should be appended to the current number and the display should be updated, just as with a digit button.
+When the decimal point is pressed, it should be appended to the current number and the display should be updated, just as with a digit button. However, there can be only one decimal point in either stored number.
 
 When the calculate button (=) is pressed, the calculator should:
   1. Apply the operation to the two stored numbers in the appropriate order
