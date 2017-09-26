@@ -31,16 +31,26 @@ function ButtonLogic() {
   // console.log(this.classList.contains('numeric'));
 
   if (this.classList.contains('numeric')) {
+
     if (display.innerHTML === "0") {
       display.innerHTML = keyLabel;
     }
     else {
       display.innerHTML = display.innerHTML + keyLabel;
     }
+    value1 = value1 + keyLabel;
+
   }
   else if (this.classList.contains('decimal')) {
    
-    alert("Handle the decimal!");
+    if (value1.indexOf('.') == -1) {
+      display.innerHTML = display.innerHTML + keyLabel;
+      value1 = value1 + keyLabel;
+    }
+    else {
+      // There is already a decimal in this number.
+      // Ignore it.
+    }    
 
   }
   else if (this.classList.contains('operator')) {
