@@ -27,7 +27,7 @@ function ButtonLogic() {
     calculate();
   }
   else if (this.classList.contains('decimal')) {
-    decimal(keyLabel);
+    decimal(keyLabel, lastKeyPressed);
   }
   else if (this.classList.contains('operator')) {
     operator(keyLabel);
@@ -68,7 +68,10 @@ function operator(keyLabel) {
   }
 }
 
-function decimal(keyLabel) {
+function decimal(keyLabel, lastKeyPressed) {
+  if (lastKeyPressed === '=') {
+    allClear();
+  }
   if (selectedOperator === '') {
     if (value1.indexOf('.') == -1) {
       if (value1 === '') {
@@ -141,7 +144,6 @@ function properAppend(main, added) {
   }
   return main + added;
 }
-
 
 function clear() {
   if (selectedOperator === '') {
