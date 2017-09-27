@@ -99,14 +99,32 @@ function operator(keyLabel) {
 
 
 function decimal(keyLabel) {
-  if (value1.indexOf('.') == -1) {
-    display.innerHTML = display.innerHTML + keyLabel;
-    value1 = value1 + keyLabel;
+
+
+
+  if (selectedOperator === '') {
+    if (value1.indexOf('.') == -1) {
+      if (value1 === '') {
+        value1 = 0 + keyLabel;
+      }
+      else {
+        value1 = value1 + keyLabel;
+      }
+      display.innerHTML = value1;
+    }
   }
   else {
-    // There is already a decimal in this number.
-    // Ignore it.
-  }    
+    if (value2.indexOf('.') == -1) {
+      if (value2 === '') {
+        value2 = 0 + keyLabel;
+      }
+      else {
+        value2 = value2 + keyLabel;
+      }
+      display.innerHTML = value2;
+    }    
+  }
+
 }
 
 function calculate() {
