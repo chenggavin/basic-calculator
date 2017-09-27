@@ -86,18 +86,8 @@ function operator(keyLabel) {
         // calculate!
         calculate();
 
-        // store results of calculation in value1
-        
-
-        // update display with results of calculation (which now is value1)
-        
-
-        // clear value2
-        value2 = '';
-
         // store keyLabel in selectedOperator
         selectedOperator = keyLabel;
-
 
       }
 
@@ -145,6 +135,18 @@ function calculate() {
       alert("What are you doing?!?!?");
 
   }
+
+  // store results of the calculation in value1
+  value1 = results;
+
+  // update display with results of calculation (which now is value1)
+  display.innerHTML = value1;
+
+  // clear value2
+  value2 = '';
+
+  // clear selectedOperator
+  selectedOperator = '';
 
 }
 
