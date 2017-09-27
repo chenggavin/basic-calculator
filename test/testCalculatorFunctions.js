@@ -39,7 +39,14 @@ describe('Calculator', function() {
     });
 
   });
-
+  describe('Calculations', function(){
+describe( 'function calculate', function() {
+    it( 'should return "2" when I add (+) "1" and "1"', function(){
+      var result = calculate("1","1","+");
+      assert.equal(result, "2" );
+    });
+})
+  });
 
 });
 
