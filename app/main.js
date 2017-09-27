@@ -11,47 +11,35 @@ var selectedOperator;
 // Wait for page to load, then...
 document.onreadystatechange = function() {
   if (document.readyState === "interactive") {
-
     allClear();
-
     for (i = 0; i < keys.length; i++) {
       keys[i].addEventListener("click", ButtonLogic);
     }
-    
     solarPanel.addEventListener("click", Surprise);
-
   }
 };
 
 
 function ButtonLogic() {
-
   var keyLabel = this.innerHTML;
-
   if (this.classList.contains('numeric')) {
     numeric(keyLabel);
   }
-
   else if (this.classList.contains('calculate')) {
     calculate();
   }
-
   else if (this.classList.contains('decimal')) {
     decimal(keyLabel);
   }
-
   else if (this.classList.contains('operator')) {
     operator(keyLabel);
   }
-
   else if (this.classList.contains('allclear')) {
     allClear();
   }
-
   else if (this.classList.contains('clear')) {
     clear();
   }
-
 }
 
 function operator(keyLabel) {
@@ -80,7 +68,6 @@ function operator(keyLabel) {
     }
   }
 }
-
 
 function decimal(keyLabel) {
   if (selectedOperator === '') {
