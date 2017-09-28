@@ -44,20 +44,7 @@ function ButtonLogic() {
   lastKeyPressed = keyLabel;
 }
 
-function processSignKey() {
-  
-  // conditions
-  // logic
 
-  var temp = sign(123);
-
-}
-
-function sign(num) {
-  var temp = Number(num)*-1;
-  console.log(temp);
-  return temp;
-}
 
 function operator(keyLabel) {
   if (value1 === '') {
@@ -85,6 +72,8 @@ function operator(keyLabel) {
     }
   }
 }
+
+
 
 function decimal(keyLabel, lastKeyPressed) {
   if (lastKeyPressed === '=') {
@@ -179,7 +168,17 @@ function allClear() {
   selectedOperator = '';
   display.innerHTML = '0';
 }
-
+function sign() {
+  console.log(display.innerHTML)
+  if (value1 = display.innerHTML) {
+  display.innerHTML = parseFloat(display.innerHTML) * -1;
+  value1 = display.innerHTML;
+}
+  else if (value2 = display.innerHTML) {
+    display.innerHTML = parseFloat(display.innerHTML) * -1;
+    value2 = display.innerHTML
+  }
+}
 function Surprise() {
   alert("SURPRISE!");
 }
